@@ -208,7 +208,7 @@ public class Controller implements Initializable {
             if (pizza.getSize()==0){
                 taSummary.appendText(rbSeafood.getText() + "Small size cost is = "
                         + currency.format(pizza.getPrice()) + "\n");
-                totalCost+= pizza.getQuantity()*pizza.getPrice();
+                totalCost+= (pizza.getQuantity()*pizza.getPrice());
             }
             else if (pizza.getSize()==1){
                 taSummary.appendText(rbSeafood.getText() + "Medium size cost is = "
@@ -224,7 +224,7 @@ public class Controller implements Initializable {
                 taSummary.appendText("Please select pizza size\n\n");
             }
 
-            totalCost+= pizza.getQuantity()*pizza.getPrice();
+//            totalCost+= pizza.getQuantity()*pizza.getPrice();
 
         } else if (rbVege.isSelected()) {
             pizza.setType(3);
@@ -361,12 +361,15 @@ public class Controller implements Initializable {
         rbSprite.setSelected(false);
         lblDrinkQuantity.setText(null);
         cbDrinkSize.setValue(null);
-        // coupon
-        chkNone.setSelected(false); // $0 checkbox
-        chkOne.setSelected(false); // $1 checkbox
-        chkTwo.setSelected(false); // $2 checkbox
+
         pizza.setQuantity(0);
         drink.setQuantity(0);
+        fries.setQuantity(0);
+        rbsmall.setSelected(false);
+        rbmedium.setSelected(false);
+        rblarge.setSelected(false);
+        lblFriesQuantity.setText(null);
+        totalCost=0;
         taSummary.setText(null);
     }
 
