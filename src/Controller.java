@@ -340,7 +340,7 @@ public class Controller implements Initializable {
             totalCost+= fries.getQuantity()* fries.getPrice();
         }
 
-        writeRecord(pizza, drink, couponAmount);
+writeRecord(pizza, drink, fries);
 
         taSummary.appendText("\n\nTotal Cost = "+currency.format(totalCost)+"\n");
     }
