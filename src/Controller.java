@@ -224,8 +224,6 @@ public class Controller implements Initializable {
                 taSummary.appendText("Please select pizza size\n\n");
             }
 
-//            totalCost+= pizza.getQuantity()*pizza.getPrice();
-
         } else if (rbVege.isSelected()) {
             pizza.setType(3);
             pizza.setSize(cbSize.getSelectionModel().getSelectedIndex());
@@ -253,7 +251,7 @@ public class Controller implements Initializable {
             else{
                 taSummary.appendText("Please select pizza size\n\n");
             }
-//
+
 
         } else {
             taSummary.appendText("Please select a Pizza type!\n");
