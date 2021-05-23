@@ -15,25 +15,5 @@ CREATE TABLE order_line (
     PRIMARY KEY(order_id)
 );
 
-INSERT INTO order_line (pizza_type, pizza_price, pizza_quantity, pizza_size,
-                        drink_type, drink_price, drink_quantity, drink_size,
-                        fries_price,
-                        fries_quantity,
-                        fries_size)
-VALUES (1, 5.59, 1, 0, 1, 3.59, 1, 0, 1,9,1);
-
-INSERT INTO order_line (pizza_type, pizza_price, pizza_quantity, pizza_size,
-                        drink_type, drink_price, drink_quantity, drink_size,
-                        fries_price,
-                        fries_quantity,
-                        fries_size)
-VALUES (1, 4.59, 2, 2, 2, 9.59, 2, 1,1,9,1,0);
-
-INSERT INTO order_line (pizza_type, pizza_price, pizza_quantity, pizza_size,
-                        drink_type, drink_price, drink_quantity, drink_size,
-                        fries_price,
-                        fries_quantity,
-                        fries_size)
-VALUES (1, 5.59, 1, 0, 0, 0.0, 0, 0,1,9,1,0);
-
 SELECT * FROM order_line;
+/*Execute this SQL Code to make a table in the Database with name order_line*/
