@@ -451,7 +451,7 @@ writeRecord(pizza, drink, fries);
             System.out.println("ex " + ex);
         }
     }
-    public void writeRecord(Pizza pizza, Drink drink, double couponAmount) {
+    public void writeRecord(Pizza pizza, Drink drink, Fries fries) {
 
         try {
             // Load the JDBC Driver
@@ -468,8 +468,8 @@ writeRecord(pizza, drink, fries);
 
             String sqlText = "INSERT INTO order_line (pizza_type, pizza_price, pizza_quantity, pizza_size, "
                     + "drink_type, drink_price, drink_quantity, drink_size, "
-                    + "coupon_amount) "
-                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"; // insert a parameter with ?
+                    + "fries_size, fries_price, fries_quantity) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?,?, ?, ?,?)"; // insert a parameter with ?
 
             // Create a prepared statement that is used to execute a precompiled SQL statement
             PreparedStatement preparedStmt = conn.prepareStatement(sqlText);
@@ -483,7 +483,9 @@ writeRecord(pizza, drink, fries);
             preparedStmt.setDouble(6, drink.getPrice());
             preparedStmt.setInt(7, drink.getQuantity());
             preparedStmt.setInt(8, drink.getSize());
-            preparedStmt.setDouble(9, couponAmount);
+            preparedStmt.setDouble(9, fries.getSize());
+            preparedStmt.setDouble(10, fries.getPrice());
+            preparedStmt.setDouble(11, fries.getQuantity());
 
             // Execute a prepared statemet
             preparedStmt.executeUpdate();
@@ -532,6 +534,7 @@ writeRecord(pizza, drink, fries);
             System.out.println("ex " + ex);
         }
     }
+
 
     @FXML
     // pizza
