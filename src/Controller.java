@@ -396,15 +396,14 @@ writeRecord(pizza, drink, fries);
             // Calculate subtotal
             double subtotal = 0.0; // fixed it for pizza
             double drinkSubtotal = 0.0; // drink
+            double friesSubtotal=0.0;
             double total = 0.0;         // sales total = pizza subtotal + drink subtotal
-            double couponAmount = 0.0;
-            double couponTotal = 0.0;
             DecimalFormat currency = new DecimalFormat("$,###.00");
 
             // Set a heading
-            taSalesSummary.appendText("Order ID \t Type \t" + "Price \t" + "Quantity \t\t" + "Size \t" + "Subtotal \t\t" // pizza
-                    + "Type \t" + "Price \t" + "Quantity \t\t" + "Size \t" + "Subtotal \t\t" // drink
-                    + "Coupon Amount" + "\n");
+            taSalesSummary.appendText("Order ID \t Pizza Type \t" + "Pizza Price \t" + "Pizza Quantity \t\t" + "Pizza Size \t" + "Pizza Subtotal \t\t" // pizza
+                    + "Drink Type \t" + "Drink Price \t" + "Drink Quantity\t\t" + "Drink Size \t" + "Drink Subtotal \t\t" // drink
+                    + "Fries Size \t" + "Fries Price\t" + "Fries Quantity \t" + "Fries Subtotal \t\t"+ "\n");
 
             // Read data from a database (order_line table) using the index number of the table or name of the column
             // Iterate through the result set and display the order information
@@ -423,24 +422,26 @@ writeRecord(pizza, drink, fries);
                 double drinkPrice = rs.getDouble(7);
                 int drinkQuantity = rs.getInt(8);
                 int drinkSize = rs.getInt(9);
-                drinkSubtotal = price * quantity;
+                drinkSubtotal = drinkPrice * drinkQuantity;
+                //fries
+                int friesSize = rs.getInt(10);
+                double friesPrice = rs.getDouble(11);
+                int friesQuantity = rs.getInt(12);
 
-                // coupon
-                couponAmount = rs.getDouble(10); // up to the 10th column index
-
-                taSalesSummary.appendText(orderId + "\t" + type + " \t\t" + currency.format(price) // pizza
-                        + "\t\t" + quantity + "\t\t" + size + "\t\t"
-                        + currency.format(subtotal) + "\t\t"
-                        + drinkType + " \t\t" + currency.format(drinkPrice) // drink
-                        + "\t\t" + drinkQuantity + "\t\t" + drinkSize + "\t\t"
-                        + currency.format(drinkSubtotal) + "\t\t"
-                        + currency.format(couponAmount) + "\n"); // coupon
-                total += (subtotal + drinkSubtotal); // sales total = pizza subtotal + drink subtotal
-                couponTotal += couponAmount;
+                friesSubtotal = friesPrice * friesQuantity;
+                taSalesSummary.appendText("\t" +orderId + "\t\t" + type + " \t\t\t" + currency.format(price) // pizza
+                        + "   \t\t" + quantity + "\t\t\t\t" + size + "\t\t"
+                        + currency.format(subtotal) + "\t\t\t\t"
+                        + drinkType + "\t\t\t" + currency.format(drinkPrice) // drink
+                        + "\t\t" + drinkQuantity + "\t\t\t\t" + drinkSize + "\t\t\t"
+                        + currency.format(drinkSubtotal) + "\t\t\t"
+                        + friesSize + "\t\t" + currency.format(friesPrice) // drink
+                        + "\t\t\t" + friesQuantity + "\t\t\t"
+                        + currency.format(friesSubtotal) + "\t\t" + "\n"); // coupon
+                total += (subtotal + drinkSubtotal+friesSubtotal); // sales total = pizza subtotal + drink subtotal
             }
             taSalesSummary.appendText("Total Sales: " + currency.format(total) + "\n");
-            taSalesSummary.appendText("Total Coupon Amount: " + currency.format(couponTotal) + "\n");
-            taSalesSummary.appendText("Total: " + currency.format(total - couponTotal) + "\n");
+            taSalesSummary.appendText("Total: " + currency.format(total) + "\n");
 
             // Close the connection
             conn.close();
@@ -450,7 +451,6 @@ writeRecord(pizza, drink, fries);
             System.out.println("ex " + ex);
         }
     }
-
     public void writeRecord(Pizza pizza, Drink drink, double couponAmount) {
 
         try {
