@@ -15,7 +15,7 @@ For VM options: --module-path ${PATH_TO_JAVAFX} --add-modules javafx.controls,ja
 Mariadb connector which in the requirements folder.</h4>
 
 
-<h3> App Screenshots </h3>
+<h3> App Screenshots: </h3>
 
 ![](img/)
 #
