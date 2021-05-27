@@ -26,6 +26,14 @@ It is a pizza shop order management system that takes order from the user and sa
 
 <ul>
   <li> Can order different kind of pizza of different sizes ( small, medium and large option availiable)</li>
+  <li> User can order fries as well( small, medium and large option available )</li>
+  <li> User can also order drinks, coke and sprite options available ( 500ml or 1.5l )</li>
+  <li> Order button will display the total oders and their cost in the output box</li>
+  <li> Reset Button will reset all the orders </li>
+  <li> Save Button save the data in the database</li>
+  <li> On the Sales Summary, The out put box shows all the sales that had been done </li>
+  <li> Calculate Sales button calculates all the sales </li>
+  <li> Reset Button reset all the saves sales</li>
 </ul>
 
 
