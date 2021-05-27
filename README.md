@@ -8,7 +8,7 @@ It is a pizza shop order management system that takes order from the user and sa
 
 <h3> App Screenshots: </h3>
 
-![](screenShots/ss1.png)
+![](screenShots/ss1.PNG)
 ![](screenShots/ss2.png)
 ![](screenShots/ss3.png)
 ![](screenShots/ss4.png)
