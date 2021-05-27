@@ -22,13 +22,11 @@ It is a pizza shop order management system that takes order from the user and sa
 ![](screenShots/ss4.PNG)
 ![](screenShots/ss5.PNG)
 
-<h3> Software Requirements: </h3>
-<h4>JavaFX SDK 11.0.2 -  https://openjfx.io/ <br>
-Scene Builder 11.0.0 - https://gluonhq.com/products/scene-builder/ <br>
-IntelliJ IDEA - https://www.jetbrains.com/idea/ <br>
-Instruction to set up - https://openjfx.io/openjfx/docs/#introduction <br> 
-For VM options: --module-path ${PATH_TO_JAVAFX} --add-modules javafx.controls,javafx.fxml ;${PATH_TO_JAVAFX} - path to JavaFX library <br>
-Mariadb connector which in the requirements folder.</h4>
+<h3> List of completed features </h3>
+
+<ul>
+  <li> Can order different kind of pizza of different sizes ( small, medium and large option availiable)</li>
+</ul>
 
 
 
