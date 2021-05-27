@@ -9,10 +9,10 @@ It is a pizza shop order management system that takes order from the user and sa
 <h3> App Screenshots: </h3>
 
 ![](screenShots/ss1.PNG)
-![](screenShots/ss2.png)
-![](screenShots/ss3.png)
-![](screenShots/ss4.png)
-![](screenShots/ss5.png)
+![](screenShots/ss2.PNG)
+![](screenShots/ss3.PNG)
+![](screenShots/ss4.PNG)
+![](screenShots/ss5.PNG)
 
 <h3> Software Requirements: </h3>
 <h4>JavaFX SDK 11.0.2 -  https://openjfx.io/ <br>
