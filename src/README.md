@@ -18,6 +18,9 @@ Mariadb connector which in the requirements folder.</h4>
 
 <h3> App Screenshots: </h3>
 
-![](img/screenShots/ss1.png)
+![](screenShots/ss1.png)
 #
-![](img/)
+![](screenShots/ss2.png)
+![](screenShots/ss3.png)
+![](screenShots/ss4.png)
+![](screenShots/ss5.png)
