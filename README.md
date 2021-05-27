@@ -22,6 +22,14 @@ It is a pizza shop order management system that takes order from the user and sa
 ![](screenShots/ss4.PNG)
 ![](screenShots/ss5.PNG)
 
+<h3>Installation</h3>
+  <li>First we should have a IDE that will work like Intellij Idea along with XAMMP (APPACHE and SQL).</li>
+  <li>Run Apache and SQL with XAMMP and create Database Name="test", username="user1" and password= "pass1".</li>
+  <li>Connect IDE with Database Name="test", username="user1" and password= "pass1"</li>
+  <li>Add MariaDB Connector file to libraries path.</li>
+  <li>Run the file. It will work if you have setup JavaFX correctly in your IDE</li>
+ 
+
 <h3> List of completed features </h3>
 
 <ul>
