@@ -37,4 +37,13 @@ It is a pizza shop order management system that takes order from the user and sa
 </ul>
 
 
+<h1>List of features yet to implement</h1>
+<ul>
+  <li> The database is visible to everyone, It can be visible to only admins/staff. It can be done through creating login systems for customers and adim separately</li>
+  <li> More food items can be added as well</li>
+  <li> Adress/seat number of the customer can also be added, to deliver food in the restaurant </li>
+  
+</ul>
+
+
 
