@@ -1,6 +1,6 @@
 // package sample;
 
-
+// Author Bashir Alam and Aqeel Ahamad
 
 import java.io.File;
 import java.io.FileNotFoundException;
